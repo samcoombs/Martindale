@@ -22,19 +22,32 @@
     }
   }
 
+  &__menu {
+    display: flex;
+  }
+
   nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 
-    .button {
-      position: absolute;
-      right: 0;
-      top: 30px;
+    .open-button {
+      display: none;
+      // z-index: 99999;
 
-      @include max-screen($menu-mobile-breakpoint) {
-        position: relative;
-      }
+      // @include max-screen($menu-mobile-breakpoint) {
+      //   display: block;
+      // }
     }
+
+    // .button {
+    //   position: absolute;
+    //   right: 0;
+    //   top: 30px;
+
+    //   @include max-screen($menu-mobile-breakpoint) {
+    //     position: relative;
+    //   }
+    // }
   }
 }

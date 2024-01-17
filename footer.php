@@ -2,47 +2,27 @@
     <div class="wrapper">
         <div class="footer__inner">
             <div class="footer__col">
-                <h4>Footer title</h4>
-                <nav>
-                    <ul>
-                        <li><a href="#">A link</a> </li>
-                        <li><a href="#">A link</a> </li>
-                        <li><a href="#">A link</a> </li>
-                        <li><a href="#">A link</a> </li>
-                    </ul>
-                </nav>
+                <p>Whilst we are building Beebu our Customer Services are available:</p>
+                <ul>
+                    <li>Monday - Friday</li>
+                    <li>9:00am - 6:00pm</li>
+                </ul>
+                <a href="mailto:talktous@beebu.co.uk">talktous@beebu.co.uk</a>
+                <p>Call 500 free from your Beebu or <a href="">0300 3036152</a></p>
             </div>
             <div class="footer__col">
-                <h4>Contact</h4>
-                <address>
-                    <?php the_field('office_address', 'options'); ?>
-                </address>
-                <?php the_field('email_address', 'options'); ?>
-                <?php the_field('phone_number', 'options'); ?>
+                <?php wp_nav_menu( array('theme_location' => 'footer-left') ); ?>
             </div>
             <div class="footer__col">
-                <h4>Social Media</h4>
-                <?php if( have_rows('social_media', 'options') ): ?>
-                    <ul class="social">
-                        <?php while( have_rows('social_media', 'options') ): the_row();
-                            $link = get_sub_field('link');
-                            $icon = get_sub_field('icon');
-                            $text = get_sub_field('text');
-                            ?>
-                            <li>
-                                <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $icon; ?> <span class="hidden"><?php echo $text; ?></span> </a>
-                            </li>
-                        <?php endwhile; ?>
-                    </ul>
-                <?php endif; ?>
+                <?php wp_nav_menu( array('theme_location' => 'footer-centre') ); ?>
+            </div>
+            <div class="footer__col">
+                <?php wp_nav_menu( array('theme_location' => 'footer-right') ); ?>
             </div>
         </div>
-    </div>
-    <div class="footer__bottom">
-        <div class="wrapper">
-            <div class="footer__bottom__inner">
-                <p>Copyright <?php echo date("Y"); ?></p>
-            </div>
+        <div class="footer__bottom">
+            <p>&copy;<?php echo date("Y"); ?> BeeBu. All rights reserved.</p>
+            <p>Website designed and built by HewittMatthews</p>
         </div>
     </div>
 </footer>

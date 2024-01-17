@@ -9,17 +9,26 @@
 
 <body <?php body_class(); ?>>
 
+<a href="#maincontent" class="skip-link">Skip to main content</a>
+
 <header class="header">
     <div class="wrapper">
         <div class="header__inner">
             <div class="header__logo">
                 <a href="/">
-                    <h2><span>Your Logo</span></h2>
+                    <img src="<?=get_template_directory_uri() ?>/assets/img/beebu-logo-white.svg" />
                 </a>
             </div>
             <nav aria-label="Main Menu">
-                <div class="main-menu">
-                    <?php wp_nav_menu( array('menu' => 'Main Menu') ); ?>
+                <button class="open-button" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
+                    <div class="hidden">Open Menu</div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- <div class="main-menu"> REINSTATE THIS TO REENABLE MOBILE MENU -->
+                <div class="header__menu">
+                    <?php wp_nav_menu( array('theme_location' => 'main-navigation') ); ?>
                 </div>
             </nav>
         </div>

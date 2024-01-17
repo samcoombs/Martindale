@@ -31,16 +31,16 @@ add_action(
 );
 
 // Register a sidebar
-function theme_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Sidebar', 'custom-theme' ),
-        'id'            => 'sidebar-1',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-}
+// function theme_widgets_init() {
+//     register_sidebar( array(
+//         'name'          => __( 'Sidebar', 'custom-theme' ),
+//         'id'            => 'sidebar-1',
+//         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</aside>',
+//         'before_title'  => '<h3 class="widget-title">',
+//         'after_title'   => '</h3>',
+//     ) );
+// }
 
 // Initiate Options page for ACF plugin
 if( function_exists('acf_add_options_page') ) {
@@ -121,5 +121,18 @@ add_filter('post_class', 'so20621481_category_id_class');
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
+
+// Menu locations
+function register_my_menus() {
+    register_nav_menus(
+      array(
+        'main-navigation' => __( 'Main Navigation' ),
+        'footer-left' => __( 'Footer Left Column' ),
+        'footer-centre' => __( 'Footer Centre Column' ),
+        'footer-right' => __( 'Footer Right Column' )
+      )
+    );
+  }
+  add_action( 'init', 'register_my_menus' );
 
 ?>
