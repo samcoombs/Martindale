@@ -23,7 +23,7 @@ var reload      = browserSync.reload;
 
 gulp.task('browserSync',['php'], function() {
     browserSync.init({
-        proxy:"your-project-name.local", // This is where you set your MAMP proxy
+        proxy:"beebu.test", // This is where you set your MAMP proxy
         baseDir: "./",
         open:true,
         notify:false

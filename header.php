@@ -9,12 +9,6 @@
 
 <body <?php body_class(); ?>>
 
-<!--[if IE]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
-
-<a href="#maincontent" class="skip-link">Skip to main content</a>
-
 <header class="header">
     <div class="wrapper">
         <div class="header__inner">
@@ -24,12 +18,6 @@
                 </a>
             </div>
             <nav aria-label="Main Menu">
-                <button class="open-button" aria-expanded="false" aria-haspopup="menu" aria-controls="main-menu" aria-label="Open Main Navigation">
-                    <div class="hidden">Open Menu</div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                 <div class="main-menu">
                     <?php wp_nav_menu( array('menu' => 'Main Menu') ); ?>
                 </div>
