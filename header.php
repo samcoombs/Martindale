@@ -16,7 +16,7 @@
         <div class="header__inner">
             <div class="header__logo">
                 <a href="/">
-                    <img src="<?=get_template_directory_uri() ?>/assets/img/beebu-logo-white.svg" />
+                    <img src="<?=get_template_directory_uri() ?>/assets/img/Martindale-logo.webp" />
                 </a>
             </div>
             <nav aria-label="Main Menu">
@@ -26,7 +26,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <!-- <div class="main-menu"> REINSTATE THIS TO REENABLE MOBILE MENU -->
+                <div class="main-menu">
                 <div class="header__menu">
                     <?php wp_nav_menu( array('theme_location' => 'main-navigation') ); ?>
                 </div>
